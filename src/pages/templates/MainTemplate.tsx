@@ -6,8 +6,8 @@ type TemplateProps = {
 }
 
 const MainTemplateBlock = styled.div`
-  width: 452px;
-  height: 868px;
+  width: 390px;
+  height: 844px;
   
   background: #fafafa;
   border-radius: 25px;
@@ -15,11 +15,14 @@ const MainTemplateBlock = styled.div`
 
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+
+  align-items: center;
   
   display: flex;  
   flex-direction: column;  
 
-  overflow-y: auto;e
+  overflow-y: auto;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {

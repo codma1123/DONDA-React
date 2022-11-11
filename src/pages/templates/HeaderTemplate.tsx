@@ -6,7 +6,7 @@ type TemplateProps = {
 }
 
 const HeaderTemplateBlock = styled.div`
-  width: 452px;
+  width: 390px;
   height: 50px;  
   background: #fafafa;  
   position: fixed;

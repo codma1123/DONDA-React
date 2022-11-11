@@ -1,15 +1,6 @@
 import styled from "styled-components"
 import MarketTemplate from "../templates/MarketTemplate"
 
-const MarketTitle = styled.div`
-  display: flex;
-  padding-top: 10px;
-  justify-content: space-around;
-  font-size: 14px;
-  letter-spacing: 2px;
-  opacity: .7;
-  gap: 10px;
-`
 
 const MarketContentArea = styled.div`
   height: 180px;
@@ -31,7 +22,6 @@ const MarketContent = styled.div`
 const Market = () => {
   return (
     <MarketTemplate>
-      <MarketTitle>
 
         <MarketContentArea>
           <div>한국시장</div>
@@ -44,7 +34,6 @@ const Market = () => {
 
         </MarketContentArea>
 
-      </MarketTitle>     
 
     </MarketTemplate>   
   )

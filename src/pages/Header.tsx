@@ -12,7 +12,7 @@ const SearchBar = styled.div`
   border-radius: 10px;
   position: block;
   font-size: 25px;
-  margin-left: 35px;
+  margin-left: 25px;
   flex-grow: 1;
 `
 
@@ -40,9 +40,13 @@ const IconButton = styled.button`
   border: none;
   padding-top: 10px;
   color: gray;
+  margin-left: 3px;
+
+  &:last-child {
+    margin-right: 10px;
+  }
     
   font-size: 25px;
-  margin-right: 10px;
 `
 
 const Header = () => {
@@ -67,11 +71,11 @@ const Header = () => {
       </SearchBar>      
 
       <IconButton>
-       <AiOutlineOrderedList />
+        <AiOutlineOrderedList />
       </IconButton>
       
       <IconButton>
-       <BsFillBookmarkDashFill />
+        <BsFillBookmarkDashFill />
       </IconButton>
 
       <IconButton>

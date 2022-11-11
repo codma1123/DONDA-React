@@ -1,3 +1,4 @@
+import RecommandContainer from "../containers/RecommandContainer"
 import StocksInfoContainer from "../containers/StocksInfoContainer"
 import Header from "./Header"
 import Market from "./home/Market"
@@ -11,6 +12,7 @@ const Home = () => {
         <Market />
 
         {/* <StocksInfoContainer /> */}
+        <RecommandContainer />
       </MainTemplate>
     </>
   )

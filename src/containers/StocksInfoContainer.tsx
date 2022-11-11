@@ -11,9 +11,7 @@ const StocksInfoContainer = () => {
   const dispatch = useDispatch<any>()
 
   useEffect(() => {
-    if(data) {
-      console.log('데이터 존재')
-    }
+    if(data) return
 
     dispatch(getStocksThunk())
   }, [dispatch])
