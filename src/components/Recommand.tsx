@@ -1,7 +1,7 @@
 import { useCallback, useEffect, MouseEvent } from "react"
 import styled from "styled-components"
 import { RecommandStocks } from "../api/stocks"
-
+import RecommandTemplate from '../pages/templates/RecommandTemplate'
 
 type RecommandProps = {
   recommandStocks: RecommandStocks | null
@@ -18,7 +18,7 @@ const RecommandBlock = styled.div`
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;  
-  width: 350px;
+  width: 100%;
   height: 100px;
 
   background: white;
@@ -59,13 +59,13 @@ const Recommand = ({ recommandStocks }: RecommandProps) => {
   }
 
   return (
-    <div>
+    <RecommandTemplate> 
       {computedRecommandStocks.map(stock => 
         <RecommandBlock key={stock.code} onClick={onClick}>
           {stock.title}
         </RecommandBlock>
-       )}
-    </div>
+       )}    
+    </RecommandTemplate>
   )
 }
 
