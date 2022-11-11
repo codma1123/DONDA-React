@@ -1,0 +1,9 @@
+$primary: #69efad;
+$primary-dark: #2bbc7d;
+$primary-light: #9fffdf;
+
+:export {
+  primary: $primary;
+  primaryDark: $primary-dark;
+  primaryLight: $primary-light;
+}
