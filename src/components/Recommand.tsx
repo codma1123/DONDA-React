@@ -1,4 +1,4 @@
-import { useCallback, useEffect, MouseEvent } from "react"
+import { useCallback, useEffect, MouseEvent, useMemo } from "react"
 import styled from "styled-components"
 import { RecommandStocks } from "../api/stocks"
 import RecommandTemplate from '../pages/templates/RecommandTemplate'
@@ -47,12 +47,14 @@ const Recommand = ({ recommandStocks }: RecommandProps) => {
 
   if (!recommandStocks) return <div>loading</div>
 
-  const computedRecommandStocks: RecommendStock[] = Object.entries(recommandStocks).map(stock => ({
-    code: stock[0],
-    title: stock[1].name,
-    close: stock[1].close,
+  const computedRecommandStocks: RecommendStock[] = useMemo(() => 
+    Object.entries(recommandStocks).map(stock => ({
+      code: stock[0],
+      title: stock[1].name,
+      close: stock[1].close,
     changes_ratio: stock[1].changes_ratio,    
-  }))
+    })), [recommandStocks])
+  
 
   const onClick = (e: MouseEvent<HTMLDivElement>) => {
     console.log(e)
