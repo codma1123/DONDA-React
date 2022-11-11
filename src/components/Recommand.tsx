@@ -54,9 +54,9 @@ const Recommand = ({ recommandStocks }: RecommandProps) => {
     changes_ratio: stock[1].changes_ratio,    
   }))
 
-  const onClick = useCallback((e: MouseEvent<HTMLDivElement>) => {
+  const onClick = (e: MouseEvent<HTMLDivElement>) => {
     console.log(e)
-  }, [])
+  }
 
   return (
     <div>

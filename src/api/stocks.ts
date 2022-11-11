@@ -19,7 +19,6 @@ export async function getKrxCorps(): Promise<Stocks> {
 
 export async function getRecommandStocks(): Promise<RecommandStocks> {
   const res = await axios.get<RecommandStocks>('/api/daily/recommand')
-  return res.data
-
-  
+  return res.data  
 }
+

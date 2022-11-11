@@ -13,25 +13,24 @@ const MarketTemplateBlock = styled.div<MarketTemplateBlockProps>`
   min-height: ${props => props.toggle ? '500px;': '200px;' };
   width: 90%;
   height: 200px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+
   background: white;
   border-radius: 20px;
-  margin-top: 80px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.0);
   outline: none;
   border: none;
-  display: flex;
-  padding-top: 10px;
+
   display: flex;
   justify-content: space-around;
   cursor: pointer;
-    
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.0);
-
-  margin-left: auto;
-  margin-right: auto;
-
-  transition: all .5s ease-in-out;  
-
   overflow: hidden;
+  
+  transition: all .5s ease-in-out;  
+  
 
 `
 
