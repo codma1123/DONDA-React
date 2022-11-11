@@ -1,52 +1,63 @@
 import { ChangeEvent, FormEvent, useState } from "react"
 import styled from "styled-components"
+import { darken, lighten } from 'polished';
 import HeaderTemplate from "./templates/HeaderTemplate"
 
 import { GoBell } from 'react-icons/go'
 import { AiOutlineOrderedList } from 'react-icons/ai'
 import { BsFillBookmarkDashFill } from 'react-icons/bs'
+import { Link } from "react-router-dom"
+
 
 const SearchBar = styled.div`
-  background: white;
   height: 30px;
-  border-radius: 10px;
-  position: block;
-  font-size: 25px;
   margin-left: 25px;
+  font-size: 25px;
+
+  background: white;
+  border-radius: 10px;
+
+  position: block;
   flex-grow: 1;
 `
 
 const Form = styled.form`
   height: 20px;
+
   border-radius: 10px;
   border-top: 1px solid #e9ecef;
+
   display: flex;
   align-items: center;
   justify-content: center;      
 `
 
 const Input = styled.input`  
-  outline: none;
-  border: none;
   width: 90%;
   margin-top: 5px;
+
   color: #8d8d8d;
+  outline: none;
+  border: none;
+  
   caret-color: #c7c7c7;
 `
 
 const IconButton = styled.button`
+  margin-right: 5px;
+  padding-top: 10px;
+  font-size: 23px;
+
+  color: gray;    
   background: none;
   cursor: pointer;
   border: none;
-  padding-top: 10px;
-  color: gray;
-  margin-left: 3px;
 
-  &:last-child {
-    margin-right: 10px;
-  }
-    
-  font-size: 25px;
+  traisition: all .2s ease-in-out;
+
+  &:hover {
+    color: ${lighten(0.3, '#808080')};
+  }  
 `
 
 const Header = () => {
@@ -69,18 +80,22 @@ const Header = () => {
           <Input onChange={onChange} value={value}/>
         </Form>
       </SearchBar>      
-
+    
       <IconButton>
         <AiOutlineOrderedList />
       </IconButton>
-      
-      <IconButton>
-        <BsFillBookmarkDashFill />
-      </IconButton>
 
-      <IconButton>
-        <GoBell />
-      </IconButton>
+      <Link to="/detail">
+        <IconButton>
+          <BsFillBookmarkDashFill />
+        </IconButton>
+      </Link>      
+        
+      <Link to="/">
+        <IconButton>
+          <GoBell />
+        </IconButton>
+      </Link>
       
     </HeaderTemplate>
   )

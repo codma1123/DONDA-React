@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
+import Detail from './pages/Detail'
 import { createGlobalStyle } from 'styled-components'
 
 import './App.css'
+import MainTemplate from './pages/templates/MainTemplate'
+import Header from './pages/Header'
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -16,11 +18,18 @@ function App() {
   return (    
     <>
       <GlobalStyles />
-      <BrowserRouter>                      
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />} />                
-        </Routes>
+      
+      <BrowserRouter> 
+        <MainTemplate>
+
+          <Header />
+
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/detail" element={<Detail />} />                
+          </Routes>
+
+        </MainTemplate>                             
       </BrowserRouter>
     </>
   )

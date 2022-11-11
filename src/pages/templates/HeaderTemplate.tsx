@@ -7,12 +7,15 @@ type TemplateProps = {
 
 const HeaderTemplateBlock = styled.div`
   width: 390px;
-  height: 50px;  
+  height: 50px;    
+
   background: #fafafa;  
-  position: fixed;
   border-radius: 25px 25px 0px 0px;
+
+  position: fixed;
   display: flex;
-  align-items: center;    
+  align-items: center;  
+    
 `
 
 const HeaderTemplate = ({ children }: TemplateProps) => {

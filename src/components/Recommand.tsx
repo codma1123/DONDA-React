@@ -1,4 +1,4 @@
-import { useCallback, useEffect, MouseEvent, useMemo } from "react"
+import { MouseEvent, useMemo } from "react"
 import styled from "styled-components"
 import { RecommandStocks } from "../api/stocks"
 import RecommandTemplate from '../pages/templates/RecommandTemplate'

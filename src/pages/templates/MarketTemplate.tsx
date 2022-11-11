@@ -13,7 +13,7 @@ const MarketTemplateBlock = styled.div<MarketTemplateBlockProps>`
   min-height: ${props => props.toggle ? '500px;': '200px;' };
   width: 90%;
   height: 200px;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
